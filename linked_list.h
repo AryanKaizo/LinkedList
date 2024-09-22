@@ -20,10 +20,15 @@ typedef struct list_head {
 
 } list_head;
 
+#define     free_node(node)     free(node); /*  frees the node only not its prev or next 
+                                                The define defination saves stack burden of 
+                                                function call. */
 
 list_head * new_list(void); // a new list func returns list_head
 list_node * new_node( int); // new_node function returns a new list_node
                             //initializes the node next and prev as null and values as specified
+
+void free_list(list_head *);// deallocates the list
 
 list_node *list_get(list_head *, unsigned int);  //get the list at given index if exist
 //return 0 at failure;

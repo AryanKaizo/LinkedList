@@ -68,9 +68,6 @@ list_node *list_get(list_head *head, unsigned int index) {
     
 }
 
-
-
-
 void print_list(list_head *head) {
     /*
         Prints the linked list in order
@@ -80,4 +77,16 @@ void print_list(list_head *head) {
         printf("%d  ", list_get(head, i)->value);
     printf("\n");
 }
-   
+
+
+
+void free_list(list_head *head) {
+    list_node *n=head->node_ptr;
+    list_node *l;
+    free(head);
+    while(n!=NULL) {
+        l=n->next;
+        free_node(n);
+        n=l;
+    }
+}
