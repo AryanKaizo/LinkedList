@@ -16,7 +16,7 @@ typedef struct list_node {
 typedef struct list_head {
     /* The head keeps track of pointer and length of list */
     unsigned int length;
-    list_node *node_ptr; // pointer to first node;
+    struct list_node *node_ptr; // pointer to first node;
 
 } list_head;
 
@@ -36,5 +36,5 @@ list_node *list_get(list_head *, unsigned int);  //get the list at given index i
 int list_append(list_head *, int);  //append to a list
 void print_list(list_head *);   //print the list
 
-
+int insert_at_index(list_head *, int); //insert between a index
 #endif  // LINKED_LIST_H_

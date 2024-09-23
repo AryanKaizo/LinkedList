@@ -3,9 +3,9 @@
 
 */
 
-
-
 #include <stdio.h>
+#include <string.h>
+
 #include "linked_list.h"
 
 int main(int argc, char const *argv[])

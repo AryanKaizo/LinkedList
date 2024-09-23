@@ -1,3 +1,5 @@
+# @AryanKaizo ;)
+
 CC=gcc
 CFLAGS=-Wall -Wextra
 NOOPT=-O0
@@ -18,7 +20,7 @@ run:
 $(EXECUTABLE): $(OFILES)
 	$(CC) $(CFLAGS) $(NOOPT) $(OFILES) -o $(EXECUTABLE)
 
-main.o: main.c linked_list.h
+main.o: main.c linked_list.h	#explicit defination
 	$(CC) $(CFLAGS) $(NOOPT) -c main.c -o main.o
 
 linked_list.o: linked_list.c linked_list.h 

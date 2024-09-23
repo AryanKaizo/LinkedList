@@ -1,3 +1,6 @@
 exec_prg
+*.out
+*.log
+*.json
 *.o
 .vscode
